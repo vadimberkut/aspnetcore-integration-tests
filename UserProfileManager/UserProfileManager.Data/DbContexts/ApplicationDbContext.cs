@@ -23,6 +23,9 @@ namespace UserProfileManager.Data.DbContexts
 
             const string MSSQL_TIMESTAMP_TYPE_NAME = "datetime";
             const string MSSQL_TIMESTAMP_UTC_GENERATE_COMMAND = "getutcdate()";
+            
+            const string POSTGRESQL_TIMESTAMP_TYPE_NAME = "timestamp";
+            const string POSTGRESQL_TIMESTAMP_UTC_GENERATE_COMMAND = "now() at time zone 'utc'";
 
             builder.Entity<UserProfileEntity>()
                 .HasKey(u => u.Id);
